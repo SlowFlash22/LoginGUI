@@ -1,11 +1,11 @@
 public class user {
-    int id;
-    String name;
-    String email;
-    int phone;
-    String password;
-    String location;
-    String regdate;
+    private int id;
+    private String name;
+    private String email;
+    private int phone;
+    private String password;
+    private String location;
+    private String regdate;
 
     public user(int id, String name, String email, int phone, String password, String location, String regdate) {
         this.id = id;
@@ -17,7 +17,7 @@ public class user {
         this.regdate = regdate;
     }
 
-    public int getID() {
+    public int getId() {
         return id;
     }
 

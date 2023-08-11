@@ -13,13 +13,18 @@ public class jdbc_dao {
         try {
             conn = jdbc_connect.getConnection();
             stmt = conn.createStatement();
-            rs = stmt.executeQuery("SELECT * FROM users");
+            rs = stmt.executeQuery("SELECT * FROM userdata");
 
             while (rs.next()) {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
                 int phone = rs.getInt("phone");
+                String password = rs.getString("password");
+                String location = rs.getString("location");
+                String regdate = rs.getString("regdate");
+                user us = new user(id, name, email, phone, password, location, regdate);
+                userList.add(us);
 
             }
         } catch (SQLException e) {
